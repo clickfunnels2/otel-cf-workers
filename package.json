@@ -21,7 +21,8 @@
 		"build": "rimraf ./dist && tsc && tsc -p tsconfig-cjs.json && pnpm fix-dist",
 		"preversion": "pnpm build",
 		"prepublishOnly": "pnpm build",
-		"watch": "tsc --watch"
+		"watch": "tsc --watch",
+		"postinstall": "pnpm build"
 	},
 	"homepage": "https://github.com/evanderkoogh/otel-cf-workers#readme",
 	"dependencies": {
