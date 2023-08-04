@@ -18,9 +18,9 @@
 	},
 	"scripts": {
 		"fix-dist": "echo '{\"type\": \"module\"}' > dist/esm/package.json && echo '{\"type\": \"commonjs\"}' > dist/cjs/package.json",
-		"build": "rimraf ./dist && tsc && tsc -p tsconfig-cjs.json && pnpm fix-dist",
-		"preversion": "pnpm build",
-		"prepublishOnly": "pnpm build",
+		"build": "rimraf ./dist && tsc && tsc -p tsconfig-cjs.json && npm fix-dist",
+		"preversion": "npm build",
+		"prepublishOnly": "npm build",
 		"watch": "tsc --watch",
 		"postinstall": "npm run build"
 	},
